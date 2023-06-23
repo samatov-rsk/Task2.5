@@ -63,7 +63,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>Spring_MVC</finalName>
+        <finalName>spring-mvc</finalName>
     </build>
 
 </project>

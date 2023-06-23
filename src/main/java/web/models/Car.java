@@ -6,6 +6,15 @@ public class Car {
     private String name;
     private String engine;
 
+    public Car() {
+    }
+
+    public Car(int id, String name, String engine) {
+        this.id = id;
+        this.name = name;
+        this.engine = engine;
+    }
+
     public int getId() {
         return id;
     }
@@ -34,11 +43,5 @@ public class Car {
     public String toString() {
         return id + " " +
                 name + " " + engine;
-    }
-
-    public Car(int id, String name, String engine) {
-        this.id = id;
-        this.name = name;
-        this.engine = engine;
     }
 }
