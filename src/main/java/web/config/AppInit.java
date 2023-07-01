@@ -11,9 +11,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[]{
-                WebConfig.class
-        }; //в одну строку можно
+        return new Class<?>[]{WebConfig.class};
     }
 
     @Override

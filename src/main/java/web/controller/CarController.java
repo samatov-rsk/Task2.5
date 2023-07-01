@@ -10,13 +10,16 @@ import web.dao.CarServiceImp;
 @Controller
 public class CarController {
 
+    private final CarServiceImp carServiceImp;
+
     @Autowired
-    private CarServiceImp carServiceImp; //используй конструктор для DI
+    public CarController(CarServiceImp carServiceImp) {
+        this.carServiceImp = carServiceImp;
+    }
 
     @GetMapping("/cars")
     public String getCar(@RequestParam(value = "count", defaultValue = "5") int count, Model model) {
         model.addAttribute("count", carServiceImp.getCountCars(count));
-        return "First/cars"; //почему First, a ne first? да и почему first вообще? можно views
-        //названия в программировании очень важны. они помогают другиз разработчикам понять, что к чему, а не только тебе
+        return "views/cars";
     }
 }
