@@ -42,6 +42,6 @@ public class Car {
     @Override
     public String toString() {
         return id + " " +
-                name + " " + engine;
+                name + " " + engine; // в одну строку
     }
 }
